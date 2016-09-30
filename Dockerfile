@@ -8,7 +8,7 @@ RUN yum -y install openssh-server policycoreutils; yum clean all
 RUN mkdir -p /var/run/sshd
 
 RUN mkdir -p /root/.ssh
-RUN echo "${KEY}" > /root/.ssh/authorized_keys
+RUN echo -e "${KEY}" > /root/.ssh/authorized_keys
 
 RUN chmod 400 /root/.ssh/authorized_keys
 
